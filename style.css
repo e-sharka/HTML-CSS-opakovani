@@ -1,59 +1,87 @@
 /*------------Tady piš svoje stylování --------------*/
-/*mobile first! */
-.social-media {
-  justify-content: flex-start;
-  width: 40%;
-  padding-left: 5px;
-}
-
-.icon {
-  margin-right: 20px;
-}
-
 .date {
-  position: relative
+  position: relative;
 }
 .date__busy {
   position: absolute;
   top: 10px;
 }
 
-.photos {
-  overflow-x: hidden;
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
- /*styly platí pro obrazovku a v případě, že má obrazovka aspon 576 px*/
+.newsletter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+/*mobile first! */
+@media screen and (min-width: 360px) {
+  .social-media {
+    justify-content: flex-start;
+    width: 40%;
+    padding-left: 5px;
+  }
+
+.card--sm {
+  width: 100%
+}
+.card--md {
+  width: 100%
+}
+
+.card--lg {
+  width: 100%
+}
+
+.card--wide {
+  width: 100%
+}
+  .icon {
+    margin-right: 20px;
+  }
+
+  .photos {
+    overflow-x: auto;
+  }
+
+  .newsletter__image {
+    display: none;
+  }
+}
+/*styly platí pro obrazovku a v případě, že má obrazovka aspon 576 px*/
 
 @media screen and (min-width: 576px) {
   .social-media {
     width: 30%;
   }
 
-  .dashboard {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-  }
-
   .card--md {
     width: 49%;
-    
   }
 
   .card--lg {
-    width: 100%
+    width: 100%;
   }
 
   .card--sm {
-    width: 49%
+    width: 49%;
   }
   .card--wide {
-    width: 100%
+    width: 100%;
   }
 
   .newsletter__article {
-    width: 100%
+    width: 100%;
+    display: flex;
+    
+  }
+
+  .newsletter__image {
+    display: inline;
   }
 }
 
@@ -70,38 +98,34 @@
   }
   .newsletter__article {
     width: 49%;
-    
-
+  }
+  .newsletter__image {
+    display: inline;
   }
 }
 
-@media screen and (min-width: 1200px)  {
+@media screen and (min-width: 1200px) {
   .social-media {
     width: 15%;
   }
 
   .dashboard {
     display: flex;
-  
   }
   .card--md {
-    order: 2;
     width: 32%;
   }
 
-  .card--lg {
-    order: 3;
-  }
-
-  .card--sm {
-    order: 4;
-  }
   .card--wide {
-    order: 1;
+    order: -1;
     width: 32%;
   }
 
   .newsletter__article {
     width: 32%;
+  }
 
+  .newsletter__image {
+    display: inline;
+  }
 }
